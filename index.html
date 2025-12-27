@@ -1,15 +1,15 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yes ] <div> and <span>
+[  yes] border:, margin:, and padding: 
+[yes  ] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
-[ no ] Feature 5 - Use a .Gif
+[ yes ] Feature 5 - Use a .Gif
 [ no ] Feature 6 - Unique Border Styles
 -->
 
@@ -21,11 +21,72 @@ Select TWO Additional Features to Add
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
   <style>
+body{background-image:url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDl6amZ2ZHFmaDFyc21tbDRkY3E0cjhtYmp3ODVzNmgxNnhlZnZ2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26BRyql7J3iOx875u/giphy.gif) ;background-color: rgb(225, 233, 252);}
 
-  </style>
+.flipcard {
+  width: 200px; border: 5px solid rgb(210, 5, 5);
+  }
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  margin: 20px;
+  height: 200px;
+  padding: 5px;
+  border: 5px solid #ed0303;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(187, 7, 7);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gift{color: rgb(109, 209, 111);}
+ </style>
+
 </head>
-<body>
 
+<body>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://literallydarling.com/wp-content/uploads/2015/12/16465032086_4751601392_o.jpg"; style="width:300px;height:200px;">
+    </div>
+    <div class="flip-card-back">
+      <h2>Your invited to the Charlie Brown Christmas Party! <img src="https://media.tenor.com/p1OO-mEFn5gAAAAM/heart.gif" width="20" height="20"> </h1>
+      <p>Snoopy will come pick you up at 8, Dress festive 
+      </p>
+      <p> <span class="gift"> <em><strong> Don't forget your gift </strong></span> 
+</div>
  
 
 </body>
